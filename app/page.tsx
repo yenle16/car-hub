@@ -3,7 +3,8 @@ import { HomeProps } from "@types";
 import Hero from "@components/Hero";
 import SearchBar from "@components/Searchbar";
 import CarCard from "@components/CarCard";
-
+import CustomFilter from "@components/CustomFilter";
+import { fuels, yearsOfProduction } from "@constants";
 
 
 export default async function Home({ searchParams }: HomeProps) {
@@ -31,6 +32,10 @@ export default async function Home({ searchParams }: HomeProps) {
           <SearchBar />
 
           <div className='home__filter-container'>
+            <div className='home__filter-container'>
+              <CustomFilter title='fuel' options={fuels} />
+              <CustomFilter title='year' options={yearsOfProduction} />
+            </div>
           </div>
         </div>
 
@@ -42,7 +47,7 @@ export default async function Home({ searchParams }: HomeProps) {
               ))}
             </div>
 
-            
+
           </section>
         ) : (
           <div className='home__error-container'>
