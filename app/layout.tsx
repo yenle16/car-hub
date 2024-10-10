@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <NavBar />
         {children}
         <Footer />
+        <div data-widget-host="stickyqr-form"></div> <script async className="stickyqr-embed-form" src="https://embed-dev.stickyqr.com/suf.js" type-id="cm22ncoy9003ea27rnep1gsfs" custom-type="hmc" ></script>
       </body>
     </html>
   );
